@@ -3,7 +3,6 @@ import { useReducer } from "react";
 type Todo = {
   id: number;
   text: string;
-  createdAt: string;
 };
 
 type State = {
@@ -29,7 +28,6 @@ function reducer(state: State, action: Action): State {
           {
             id: Date.now(),
             text: action.payload.trim(),
-            createdAt: new Date().toLocaleString('vi-VN')
           }
         ],
         inputText: ""
